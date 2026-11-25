@@ -1,0 +1,189 @@
+@theme {
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-madeira: #1E1410;
+  --color-cobre: #D48C2A;
+  --color-azulejo: #1B4B72;
+  --color-creme: #F7F1E5;
+  --color-terracota: #A83B24;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #F7F1E5;
+    color: #1E1410;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+}
+
+/* Tactile 3D Botequim Surfaces & Wood Grain */
+.surface-wood {
+  background-color: #1E1410;
+  background-image:
+    radial-gradient(ellipse at 18% 0%, rgba(212, 140, 42, 0.14) 0%, transparent 55%),
+    repeating-linear-gradient(
+      92deg,
+      rgba(255, 240, 220, 0.015) 0px,
+      rgba(255, 240, 220, 0.015) 2px,
+      transparent 2px,
+      transparent 9px
+    ),
+    linear-gradient(180deg, #271A15 0%, #1E1410 55%, #160E0B 100%);
+}
+
+.surface-creme-3d {
+  background: linear-gradient(180deg, #FBF7EE 0%, #F7F1E5 100%);
+  border: 1px solid rgba(30, 20, 16, 0.09);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 14px 30px -10px rgba(30, 20, 16, 0.16),
+    0 4px 10px -3px rgba(30, 20, 16, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.surface-wood-3d {
+  background: linear-gradient(180deg, #291B15 0%, #1E1410 100%);
+  border: 1px solid rgba(212, 140, 42, 0.24);
+  border-top: 1px solid rgba(247, 241, 229, 0.18);
+  box-shadow:
+    0 18px 36px -12px rgba(15, 9, 7, 0.55),
+    0 6px 14px -4px rgba(15, 9, 7, 0.35),
+    inset 0 1px 0 rgba(255, 245, 230, 0.1);
+}
+
+.surface-azulejo-3d {
+  background: linear-gradient(180deg, #215784 0%, #1B4B72 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 16px 32px -10px rgba(27, 75, 114, 0.42),
+    0 4px 12px -2px rgba(30, 20, 16, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Tactile Physical Push Buttons (16px radius mandatory) */
+.btn-3d-cobre {
+  border-radius: 16px;
+  background: linear-gradient(180deg, #E29B37 0%, #D48C2A 100%);
+  color: #1E1410;
+  border-top: 1px solid rgba(255, 244, 214, 0.55);
+  box-shadow:
+    0 4px 0 #9B6215,
+    0 10px 20px -6px rgba(30, 20, 16, 0.38);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1), filter 140ms ease;
+}
+
+.btn-3d-cobre:hover {
+  filter: brightness(1.04);
+}
+
+.btn-3d-cobre:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 #9B6215,
+    0 4px 10px -4px rgba(30, 20, 16, 0.32);
+}
+
+.btn-3d-terracota {
+  border-radius: 16px;
+  background: linear-gradient(180deg, #BA442B 0%, #A83B24 100%);
+  color: #F7F1E5;
+  border-top: 1px solid rgba(255, 224, 214, 0.32);
+  box-shadow:
+    0 4px 0 #702313,
+    0 10px 20px -6px rgba(30, 20, 16, 0.35);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1), filter 140ms ease;
+}
+
+.btn-3d-terracota:hover {
+  filter: brightness(1.05);
+}
+
+.btn-3d-terracota:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 #702313,
+    0 4px 10px -4px rgba(30, 20, 16, 0.28);
+}
+
+.btn-3d-azulejo {
+  border-radius: 16px;
+  background: linear-gradient(180deg, #215A87 0%, #1B4B72 100%);
+  color: #F7F1E5;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 4px 0 #102F49,
+    0 10px 20px -6px rgba(27, 75, 114, 0.35);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1), filter 140ms ease;
+}
+
+.btn-3d-azulejo:hover {
+  filter: brightness(1.06);
+}
+
+.btn-3d-azulejo:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 #102F49,
+    0 4px 10px -4px rgba(27, 75, 114, 0.25);
+}
+
+.btn-3d-creme {
+  border-radius: 16px;
+  background: linear-gradient(180deg, #FFFDF8 0%, #F2E8D5 100%);
+  color: #1E1410;
+  border: 1px solid rgba(30, 20, 16, 0.14);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 4px 0 #D6C7AF,
+    0 8px 18px -6px rgba(30, 20, 16, 0.16);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 140ms cubic-bezier(0.16, 1, 0.3, 1), background 140ms ease;
+}
+
+.btn-3d-creme:hover {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7F1E5 100%);
+}
+
+.btn-3d-creme:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 #D6C7AF,
+    0 3px 8px -4px rgba(30, 20, 16, 0.14);
+}
+
+/* Safe area padding helper for mobile bottom nav */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Tabular numbers for schedules & ratings */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Azulejo repeating pattern subtle border */
+.azulejo-strip {
+  background-color: #1B4B72;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(247, 241, 229, 0.24) 1.5px, transparent 1.5px),
+    linear-gradient(45deg, rgba(247, 241, 229, 0.08) 25%, transparent 25%, transparent 75%, rgba(247, 241, 229, 0.08) 75%),
+    linear-gradient(-45deg, rgba(247, 241, 229, 0.08) 25%, transparent 25%, transparent 75%, rgba(247, 241, 229, 0.08) 75%);
+  background-size: 20px 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

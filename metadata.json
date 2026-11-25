@@ -1,0 +1,6 @@
+{
+  "name": "Boteco Maria",
+  "description": "Bar, Petiscaria e Botequim Tradicional em Santo André desde 2008. Empadinhas premiadas, petiscos clássicos, feijoada, chopp cremoso e reservas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
